@@ -93,7 +93,7 @@ nav .nav-header{
   }
 
   .bg-image img{
-    height: 850px;
+    height: 100vh;
   }
   
   .text-block {
@@ -250,7 +250,7 @@ nav .nav-header{
   #services{
     background: #000;
     color: #fff;
-    height: auto;
+    max-height: 100%;
   }
 
   #services .service{
@@ -275,15 +275,15 @@ nav .nav-header{
   #services .service{
     background-color: #504d4d;
     padding: 100px 50px;
-    height: 500px
+    min-height: 100%;
   }
 
   #services .service:hover{
     background-color: #54B4D3;
     transform: translatey(-40px);
     transition: all 0.3s ease-in;
-    height: auto;
   }
+
 
   .services-p{
     font-size: 20px;
@@ -291,10 +291,16 @@ nav .nav-header{
 
   @media screen and (max-width:980px) {
     .service{
-        margin: 50px;
-        height: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
     }
+
+ 
+
   }
+
+  
 
   /* SERVICES END */
 
@@ -312,8 +318,14 @@ nav .nav-header{
     font-size: 30px;
 }
 
+
+.contact-contact{
+ margin-left: 300px;
+}
+
 .contact-details li span{
-    font-size: 20px;
+    font-size: 24px;
+    font-family: 'poppins';
 }
 
 #contact li{
@@ -323,5 +335,30 @@ nav .nav-header{
 #submit{
     background-color: #54B4D3;
     color: #fff;
+}
+
+#contact input{
+  border: 1px solid black;
+  padding: 24px 30px;
+}
+
+#contact input::placeholder{
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: 'poppins';
+}
+
+#contact textarea{
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: 'poppins';
+  border: 1px solid black;
+}
+
+@media screen and (max-width:980px) {
+  
+.contact-contact{
+  margin-left: 0;
+ }
 }
 /* CONTACT END */
